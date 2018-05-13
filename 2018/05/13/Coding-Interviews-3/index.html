@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="题目描述在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。">
-<meta name="keywords" content="数组">
+    <meta name="description" content="题目描述 在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。">
+<meta name="keywords" content="数组,Coding Interviews">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数组中重复的数字">
-<meta property="og:url" content="http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/index.html">
+<meta property="og:url" content="http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/index.html">
 <meta property="og:site_name" content="Carpe diem">
-<meta property="og:description" content="题目描述在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。">
+<meta property="og:description" content="题目描述 在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-13T12:16:55.921Z">
+<meta property="og:updated_time" content="2018-05-13T12:40:01.615Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组中重复的数字">
-<meta name="twitter:description" content="题目描述在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。">
+<meta name="twitter:description" content="题目描述 在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。">
     
     
         
@@ -75,6 +75,8 @@
     <span id="actions">
       <ul>
         
+        <li><a class="icon" href="/2018/05/13/Coding-Interviews-5/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
         
         <li><a class="icon" href="/2017/06/01/CMake-syntax/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
@@ -89,21 +91,22 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&text=数组中重复的数字"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&is_video=false&description=数组中重复的数字"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=数组中重复的数字&body=Check out this article: http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&name=数组中重复的数字&description=&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a href=&#34;#题目描述&#34; class=&#34;headerlink&#34; title=&#34;题目描述&#34;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中&lt;strong&gt;任意一个&lt;/strong&gt;重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。&lt;br&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&text=数组中重复的数字"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&title=数组中重复的数字"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&is_video=false&description=数组中重复的数字"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=数组中重复的数字&body=Check out this article: http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&title=数组中重复的数字"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&title=数组中重复的数字"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&title=数组中重复的数字"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&title=数组中重复的数字"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&name=数组中重复的数字&description=&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a href=&#34;#题目描述&#34; class=&#34;headerlink&#34; title=&#34;题目描述&#34;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中&lt;strong&gt;任意一个&lt;/strong&gt;重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。&lt;br&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#错误总结"><span class="toc-number">4.</span> <span class="toc-text">错误总结</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决思路"><span class="toc-number">2.</span> <span class="toc-text">解决思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#错误总结"><span class="toc-number">4.</span> <span class="toc-text">错误总结</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -133,7 +136,7 @@
       
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/数组/">数组</a>
+        <a class="tag-link" href="/tags/Coding-Interviews/">Coding Interviews</a>, <a class="tag-link" href="/tags/数组/">数组</a>
     </div>
 
 
@@ -142,8 +145,10 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中<strong>任意一个</strong>重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。<br><a id="more"></a></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
+    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中<strong>任意一个</strong>重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。<br><a id="more"></a></p>
+</blockquote>
+<h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><ol>
 <li><p>利用一个大小为n的hashmap存储每个数字的个数，当发现数字已经存在的时候，返回。</p>
 </li>
 <li><p>思路1我们发现有题目中的隐藏条件没有用到，即所有得数字都在0-的范围内，则我们可以不需要额外的数据结构就能够实现变量个数的统计。当 nums[nums[i]] == nums[i]时进行处理。</p>
@@ -180,21 +185,22 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#错误总结"><span class="toc-number">4.</span> <span class="toc-text">错误总结</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决思路"><span class="toc-number">2.</span> <span class="toc-text">解决思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#错误总结"><span class="toc-number">4.</span> <span class="toc-text">错误总结</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&text=数组中重复的数字"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&is_video=false&description=数组中重复的数字"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=数组中重复的数字&body=Check out this article: http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&name=数组中重复的数字&description=&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a href=&#34;#题目描述&#34; class=&#34;headerlink&#34; title=&#34;题目描述&#34;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中&lt;strong&gt;任意一个&lt;/strong&gt;重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。&lt;br&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&text=数组中重复的数字"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&title=数组中重复的数字"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&is_video=false&description=数组中重复的数字"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=数组中重复的数字&body=Check out this article: http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&title=数组中重复的数字"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&title=数组中重复的数字"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&title=数组中重复的数字"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&title=数组中重复的数字"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/13/Coding-Interviews-3/&name=数组中重复的数字&description=&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a href=&#34;#题目描述&#34; class=&#34;headerlink&#34; title=&#34;题目描述&#34;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中&lt;strong&gt;任意一个&lt;/strong&gt;重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。&lt;br&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
