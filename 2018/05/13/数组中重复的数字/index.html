@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Carpe diem">
 <meta property="og:description" content="题目描述在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-13T09:33:59.257Z">
+<meta property="og:updated_time" content="2018-05-13T12:16:55.921Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组中重复的数字">
 <meta name="twitter:description" content="题目描述在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。">
@@ -98,12 +98,12 @@
   <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&name=数组中重复的数字&description=&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a href=&#34;#题目描述&#34; class=&#34;headerlink&#34; title=&#34;题目描述&#34;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。&lt;br&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&name=数组中重复的数字&description=&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a href=&#34;#题目描述&#34; class=&#34;headerlink&#34; title=&#34;题目描述&#34;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中&lt;strong&gt;任意一个&lt;/strong&gt;重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。&lt;br&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#错误总结"><span class="toc-number">4.</span> <span class="toc-text">错误总结</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -142,7 +142,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。<br><a id="more"></a></p>
+    <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中<strong>任意一个</strong>重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。<br><a id="more"></a></p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
 <li><p>利用一个大小为n的hashmap存储每个数字的个数，当发现数字已经存在的时候，返回。</p>
 </li>
@@ -150,7 +150,8 @@
 </li>
 <li>利用一个辅助数组对数据进行存储，避免思路2中数组内元素的交换。</li>
 </ol>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SolutionClass</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = nums.length;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SolutionClass</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 前面记得判断数据有效性 即数据的范围为0-n-1</span></span><br><span class="line">        <span class="keyword">int</span> len = nums.length;</span><br><span class="line">        <span class="keyword">int</span> tmp;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] != i)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[i] == nums[nums[i]])&#123;</span><br><span class="line">                    <span class="keyword">return</span> nums[i];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">int</span> tmp = nums[i];</span><br><span class="line">                nums[i] = nums[tmp];</span><br><span class="line">                nums[tmp] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 不存在重复的</span></span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="错误总结"><a href="#错误总结" class="headerlink" title="错误总结"></a>错误总结</h2><p><strong> 数据有效性和最后不存在重复的情况 </strong></p>
 
   </div>
 </article>
@@ -179,7 +180,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#错误总结"><span class="toc-number">4.</span> <span class="toc-text">错误总结</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
@@ -193,7 +194,7 @@
   <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&title=数组中重复的数字"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&name=数组中重复的数字&description=&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a href=&#34;#题目描述&#34; class=&#34;headerlink&#34; title=&#34;题目描述&#34;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。&lt;br&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/13/数组中重复的数字/&name=数组中重复的数字&description=&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a href=&#34;#题目描述&#34; class=&#34;headerlink&#34; title=&#34;题目描述&#34;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中&lt;strong&gt;任意一个&lt;/strong&gt;重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。&lt;br&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
