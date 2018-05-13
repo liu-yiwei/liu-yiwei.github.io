@@ -10,8 +10,6 @@
   <meta name="author" content="LiuYiwei">
   
   <meta name="description" content="虚拟内存
-在Nachos中修改目前的内存分配方式，使得多个线程可以同时存在于内存之中，这些线程可以按照“优先级”的方式进行调度。
-
 在Nachos中修改目前的内存分配方式，使得多个线程可以同时存在于内存之中，这些线程可以按照“优先级”的方式进行调度。">
   
   
@@ -119,23 +117,15 @@
 	<div class="mypage">		
 	  		
 
-	  <h1 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h1><ol>
-<li><p>在Nachos中修改目前的内存分配方式，使得多个线程可以同时存在于内存之中，这些线程可以按照“优先级”的方式进行调度。</p>
-</li>
-<li><p>在Nachos中修改目前的内存分配方式，使得多个线程可以同时存在于内存之中，这些线程可以按照“优先级”的方式进行调度。</p>
-</li>
+	  <h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><ol>
+<li>在Nachos中修改目前的内存分配方式，使得多个线程可以同时存在于内存之中，这些线程可以按照“优先级”的方式进行调度。</li>
 </ol>
 <a id="more"></a>
-<h1 id="基本概念介绍"><a href="#基本概念介绍" class="headerlink" title="基本概念介绍"></a>基本概念介绍</h1><ul>
+<h2 id="基本概念介绍"><a href="#基本概念介绍" class="headerlink" title="基本概念介绍"></a>基本概念介绍</h2><ul>
 <li>虚拟内存</li>
 <li>TLB</li>
 </ul>
-<h1 id="实验目标"><a href="#实验目标" class="headerlink" title="实验目标"></a>实验目标</h1><h1 id="程序执行流程"><a href="#程序执行流程" class="headerlink" title="程序执行流程"></a>程序执行流程</h1><h2 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h2><h2 id="需要修改的文件列表"><a href="#需要修改的文件列表" class="headerlink" title="需要修改的文件列表"></a>需要修改的文件列表</h2><ol>
-<li>阿道夫</li>
-<li>ls</li>
-</ol>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span></span><br><span class="line">a::a()&#123;</span><br><span class="line">    print(<span class="string">"lsdskfj"</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">import</span> cv</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"lkjkajldf:"</span>)</span><br><span class="line">print(<span class="string">"liuyiweo"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://github.com/liu-yiwei/NachOS" target="_blank" rel="noopener">最终代码实现(每提交一次对应一个实验)</a></p>
+<h2 id="实验目标"><a href="#实验目标" class="headerlink" title="实验目标"></a>实验目标</h2><h2 id="程序执行流程"><a href="#程序执行流程" class="headerlink" title="程序执行流程"></a>程序执行流程</h2><h3 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h3><h3 id="需要修改的文件列表"><a href="#需要修改的文件列表" class="headerlink" title="需要修改的文件列表"></a>需要修改的文件列表</h3><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://github.com/liu-yiwei/NachOS" target="_blank" rel="noopener">最终代码实现(每提交一次对应一个实验)</a></p>
 <p><a href="http://oqt3wq2vs.bkt.clouddn.com/blog/20170531/153417098.pdf" target="_blank" rel="noopener">Implementing Virtual Memory on Nachos</a></p>
 <p><a href="http://www.wendangku.net/doc/9383d57a5acfa1c7aa00ccd6-11.html" target="_blank" rel="noopener">Nachos 实验11 设计并实现用户空间的虚拟内存管理-上</a></p>
 <p><a href="http://m.wendangku.net/doc/f97f7e6a9b6648d7c1c746b8-13.html" target="_blank" rel="noopener">北大 nachos 考试 虚拟内存实验讲解</a></p>
