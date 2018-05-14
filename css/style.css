@@ -1455,3 +1455,43 @@ code {
 .highlight .line {
   height: 22px;
 }
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.tag_box {
+  margin: 0;
+  overflow: hidden;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.tag_box li {
+  list-style-type: none;
+  line-height: 28px;
+  float: left;
+}
+.tag_box a {
+  padding: 2px 6px;
+  margin: 2px;
+  background: #e5e5e5;
+  color: #555;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1px dashed #bbb;
+}
+.tag_box a:hover {
+  background-color: #2bbc8a;
+  color: #fff;
+  opacity: 0.9;
+}
+.tag_box a span {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+.tag_box a:hover,
+.tag_box a.active {
+  background: #57a957;
+  border: 1px solid #4c964d;
+  color: #fff;
+}
