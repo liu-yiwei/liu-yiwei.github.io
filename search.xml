@@ -3,6 +3,89 @@
   
     
     <entry>
+      <title>华为笔试-2 | 求一个表达式得最大值</title>
+      <link href="/2018/05/16/bishi-2/"/>
+      <url>/2018/05/16/bishi-2/</url>
+      <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>给出十个数,从中任选三个数作为x,y,z的值,求出x^2 - y^2 + x*y +z 得最小值。</p><h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><p>暴力求解法。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 笔试题 </tag>
+            
+            <tag> 华为 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>华为笔试-1 | 判断数组所占空间大小</title>
+      <link href="/2018/05/16/bishi-1/"/>
+      <url>/2018/05/16/bishi-1/</url>
+      <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>给出一个字符串，例如 unsigned int test[100];计算出这个数组所占的字节数。</p><h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><ol><li>计算数目</li><li>判断格式是否正确</li></ol><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h2 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h2><p>不要总用一些莫名其妙的方法导致代码可读性极差。</p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 笔试题 </tag>
+            
+            <tag> 华为 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>上楼梯问题</title>
+      <link href="/2018/05/14/DP-1/"/>
+      <url>/2018/05/14/DP-1/</url>
+      <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>有n个台阶，一次可以走一个或者两个，则上楼有几种方案。</p><h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><ul><li>状态</li><li>状态转移方程</li><li>无后效性</li><li>子问题图(5个台阶)</li></ul><p>flow<br>st=&gt;start: Start<br>op=&gt;operation: Your Operation<br>cond=&gt;condition: Yes or No?<br>e=&gt;end<br>st-&gt;op-&gt;cond<br>cond(yes)-&gt;e<br>cond(no)-&gt;op</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 动态规划 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>LeetCode 748 | Min Cost Climbing Stairs</title>
+      <link href="/2018/05/14/LeetCode-748/"/>
+      <url>/2018/05/14/LeetCode-748/</url>
+      <content type="html"><![CDATA[<p>##</p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 动态规划 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>LeetCode 746 | Min Cost Climbing Stairs</title>
+      <link href="/2018/05/14/LeetCode-746/"/>
+      <url>/2018/05/14/LeetCode-746/</url>
+      <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).</p><p>Once you pay the cost, you can either climb one or two steps. You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.</p><h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h3><blockquote><p>Input: cost = [10, 15, 20]<br>Output: 15<br>Explanation: Cheapest is start on cost[1], pay that cost and go to the top.</p></blockquote><h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2:"></a>Example 2:</h3><blockquote><p>Input: cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]<br>Output: 6<br>Explanation: Cheapest is start on cost[0], and only step on 1s, skipping cost[3].</p></blockquote><h3 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h3><ol><li>cost will have a length in the range [2, 1000].</li><li>Every cost[i] will be an integer in the range [0, 999].</li></ol><h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><ul><li>最优解 走完楼梯花费最少</li><li>状态转移方程</li><li>重叠子问题</li><li>分析<ol><li>F(n) 走n个台阶需要的最小cost</li><li>F(n) = min(F(n-1));</li></ol></li><li>递归的最小条件<ol><li>F(0) = 0;</li><li>F(1) = min(cost[0], cost[1]);</li><li>F(n) = min(F(n-2),F(n-1)) + cost[n];</li></ol></li></ul><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="递归解法"><a href="#递归解法" class="headerlink" title="递归解法"></a>递归解法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="备忘录解法"><a href="#备忘录解法" class="headerlink" title="备忘录解法"></a>备忘录解法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="DP解法"><a href="#DP解法" class="headerlink" title="DP解法"></a>DP解法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>不要总是拿背包来套</p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 动态规划 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>两个链表的第一个公共节点</title>
       <link href="/2018/05/13/Coding-Interviews-52/"/>
       <url>/2018/05/13/Coding-Interviews-52/</url>
