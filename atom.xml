@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liu-yiwei.github.io/"/>
-  <updated>2018-05-16T15:05:29.275Z</updated>
+  <updated>2018-05-16T15:11:39.713Z</updated>
   <id>http://liu-yiwei.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>华为笔试-3</title>
+    <title>华为笔试-3 | 数据插入到某个报文尾部的方案选择</title>
     <link href="http://liu-yiwei.github.io/2018/05/16/bishi-3/"/>
     <id>http://liu-yiwei.github.io/2018/05/16/bishi-3/</id>
     <published>2018-05-16T15:04:42.967Z</published>
-    <updated>2018-05-16T15:05:29.275Z</updated>
+    <updated>2018-05-16T15:11:39.713Z</updated>
     
     <content type="html"><![CDATA[<p>##题目描述</p><p>在转发系统中，报文往往储存在固定长度的缓存当中，通常称这种定长的缓存为PBUF。一个报文可以存储在一个或者多个PBUF中，形成一个PBUF链。报文最多可由16个PBUF组成。PBUF的本身的长度是一致的，称为payload_len。本题中，我们将每个PBUF当前存储的数据简化为两个属性：数据相对于PBUF存储起始位置的偏移(data_offset)和数据长度（data_len）。这些属性的单位均为字节。在报文转发业务实现的过程中，有时需要在报文尾部添加一定长度的数据。添加数据时可能需要多种操作的组合，可以根据需要执行创建新PBUF、将数据从一个PBUF拷贝到另一个PBUF或者将数据移动到本PBUF另一个位置等操作。添加方案的原则是：首先考虑最小化数据搬移，其次考虑最小化新增PBUF。即添加数据的过程如果最后一片PBUF的尾部无法满足添加要求，则优先考虑添加PBUF，而非搬移数据腾出空间。添加的数据应该尽量向较前的PBUF集中。</p><p>以下是一个实例：</p><p>报文由三个PBUF组成，这些PBUF的payload_len都是2048，data_offset和data_len依次是{0,2048}、{0,2048}和{0,1024}</p><p>现在要在报文尾部添加一段200字节长度的数据</p><p>处理完成后，报文的PBUF的属性依次是：</p><p>{0,2048}、{0,2048}和{0,1224}。</p><p>请编程解决一段数据插入到某个报文尾部的方案选择问题。</p><p>输入描述:<br>第一行数据，一个无符号整数表示的PBUF长度（payload_len）；<br>第二行，插入数据的长度，无符号整数。<br>第三行及以后，每行是一个PBUF的属性，即data_offset和data_len，均是无符号整数，用逗号(,)分隔。<br>最后一行以“end”作为结束标记。<br>输入的数据均是正确的，且所有整数都不超过4096，无须进行检查。<br>输出描述:<br>最佳插入方案处理之后的报文所有PBUF的属性，每个PBUF一行，data_offset和data_len都用无符号整数表示，用逗号分隔。</p>]]></content>
     
@@ -35,6 +35,10 @@
     
     </summary>
     
+    
+      <category term="笔试题" scheme="http://liu-yiwei.github.io/tags/%E7%AC%94%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="华为" scheme="http://liu-yiwei.github.io/tags/%E5%8D%8E%E4%B8%BA/"/>
     
   </entry>
   

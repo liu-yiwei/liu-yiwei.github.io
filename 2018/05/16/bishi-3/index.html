@@ -7,15 +7,16 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="##题目描述 在转发系统中，报文往往储存在固定长度的缓存当中，通常称这种定长的缓存为PBUF。一个报文可以存储在一个或者多个PBUF中，形成一个PBUF链。报文最多可由16个PBUF组成。PBUF的本身的长度是一致的，称为payload_len。本题中，我们将每个PBUF当前存储的数据简化为两个属性：数据相对于PBUF存储起始位置的偏移(data_offset)和数据长度（data_len）。这些">
+<meta name="keywords" content="笔试题,华为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="华为笔试-3">
+<meta property="og:title" content="华为笔试-3 | 数据插入到某个报文尾部的方案选择">
 <meta property="og:url" content="http://liu-yiwei.github.io/2018/05/16/bishi-3/index.html">
 <meta property="og:site_name" content="Carpe diem">
 <meta property="og:description" content="##题目描述 在转发系统中，报文往往储存在固定长度的缓存当中，通常称这种定长的缓存为PBUF。一个报文可以存储在一个或者多个PBUF中，形成一个PBUF链。报文最多可由16个PBUF组成。PBUF的本身的长度是一致的，称为payload_len。本题中，我们将每个PBUF当前存储的数据简化为两个属性：数据相对于PBUF存储起始位置的偏移(data_offset)和数据长度（data_len）。这些">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-16T15:05:29.275Z">
+<meta property="og:updated_time" content="2018-05-16T15:11:39.713Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="华为笔试-3">
+<meta name="twitter:title" content="华为笔试-3 | 数据插入到某个报文尾部的方案选择">
 <meta name="twitter:description" content="##题目描述 在转发系统中，报文往往储存在固定长度的缓存当中，通常称这种定长的缓存为PBUF。一个报文可以存储在一个或者多个PBUF中，形成一个PBUF链。报文最多可由16个PBUF组成。PBUF的本身的长度是一致的，称为payload_len。本题中，我们将每个PBUF当前存储的数据简化为两个属性：数据相对于PBUF存储起始位置的偏移(data_offset)和数据长度（data_len）。这些">
     
     
@@ -36,7 +37,7 @@
         
     
     <!-- title -->
-    <title>华为笔试-3</title>
+    <title>华为笔试-3 | 数据插入到某个报文尾部的方案选择</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -89,15 +90,15 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://liu-yiwei.github.io/2018/05/16/bishi-3/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&text=华为笔试-3"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&is_video=false&description=华为笔试-3"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=华为笔试-3&body=Check out this article: http://liu-yiwei.github.io/2018/05/16/bishi-3/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&name=华为笔试-3&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&text=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&is_video=false&description=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=华为笔试-3 | 数据插入到某个报文尾部的方案选择&body=Check out this article: http://liu-yiwei.github.io/2018/05/16/bishi-3/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&name=华为笔试-3 | 数据插入到某个报文尾部的方案选择&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -114,7 +115,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        华为笔试-3
+        华为笔试-3 | 数据插入到某个报文尾部的方案选择
     </h1>
 
 
@@ -130,6 +131,11 @@
 
 
       
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/华为/">华为</a>, <a class="tag-link" href="/tags/笔试题/">笔试题</a>
+    </div>
+
 
     </div>
   </header>
@@ -179,15 +185,15 @@
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://liu-yiwei.github.io/2018/05/16/bishi-3/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&text=华为笔试-3"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&is_video=false&description=华为笔试-3"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=华为笔试-3&body=Check out this article: http://liu-yiwei.github.io/2018/05/16/bishi-3/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&name=华为笔试-3&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&text=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&is_video=false&description=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=华为笔试-3 | 数据插入到某个报文尾部的方案选择&body=Check out this article: http://liu-yiwei.github.io/2018/05/16/bishi-3/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3 | 数据插入到某个报文尾部的方案选择"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&name=华为笔试-3 | 数据插入到某个报文尾部的方案选择&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
