@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="问题描述有n个台阶，一次可以走一个或者两个，则上楼有几种方案。 解决思路 状态 状态转移方程 无后效性 子问题图(5个台阶)  flowst=&amp;gt;start: Startop=&amp;gt;operation: Your Operationcond=&amp;gt;condition: Yes or No?e=&amp;gt;endst-&amp;gt;op-&amp;gt;condcond(yes)-&amp;gt;econd(no)-">
+    <meta name="description" content="问题描述有n个台阶，一次可以走一个或者两个，则上楼有几种方案。 解决思路 状态 状态转移方程 无后效性 子问题图(5个台阶)   1234567st=&amp;gt;start: Startop=&amp;gt;operation: Your Operationcond=&amp;gt;condition: Yes or No? e=&amp;gt;endst-&amp;gt;op-&amp;gt;condcond(yes)-&amp;gt;econd">
 <meta name="keywords" content="动态规划">
 <meta property="og:type" content="article">
 <meta property="og:title" content="上楼梯问题">
 <meta property="og:url" content="http://liu-yiwei.github.io/2018/05/14/DP-1/index.html">
 <meta property="og:site_name" content="Carpe diem">
-<meta property="og:description" content="问题描述有n个台阶，一次可以走一个或者两个，则上楼有几种方案。 解决思路 状态 状态转移方程 无后效性 子问题图(5个台阶)  flowst=&amp;gt;start: Startop=&amp;gt;operation: Your Operationcond=&amp;gt;condition: Yes or No?e=&amp;gt;endst-&amp;gt;op-&amp;gt;condcond(yes)-&amp;gt;econd(no)-">
+<meta property="og:description" content="问题描述有n个台阶，一次可以走一个或者两个，则上楼有几种方案。 解决思路 状态 状态转移方程 无后效性 子问题图(5个台阶)   1234567st=&amp;gt;start: Startop=&amp;gt;operation: Your Operationcond=&amp;gt;condition: Yes or No? e=&amp;gt;endst-&amp;gt;op-&amp;gt;condcond(yes)-&amp;gt;econd">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-14T11:49:24.012Z">
+<meta property="og:updated_time" content="2018-05-16T15:07:44.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="上楼梯问题">
-<meta name="twitter:description" content="问题描述有n个台阶，一次可以走一个或者两个，则上楼有几种方案。 解决思路 状态 状态转移方程 无后效性 子问题图(5个台阶)  flowst=&amp;gt;start: Startop=&amp;gt;operation: Your Operationcond=&amp;gt;condition: Yes or No?e=&amp;gt;endst-&amp;gt;op-&amp;gt;condcond(yes)-&amp;gt;econd(no)-">
+<meta name="twitter:description" content="问题描述有n个台阶，一次可以走一个或者两个，则上楼有几种方案。 解决思路 状态 状态转移方程 无后效性 子问题图(5个台阶)   1234567st=&amp;gt;start: Startop=&amp;gt;operation: Your Operationcond=&amp;gt;condition: Yes or No? e=&amp;gt;endst-&amp;gt;op-&amp;gt;condcond(yes)-&amp;gt;econd">
     
     
         
@@ -149,9 +149,9 @@
 <li>状态</li>
 <li>状态转移方程</li>
 <li>无后效性</li>
-<li>子问题图(5个台阶)</li>
+<li>子问题图(5个台阶) </li>
 </ul>
-<p>flow<br>st=&gt;start: Start<br>op=&gt;operation: Your Operation<br>cond=&gt;condition: Yes or No?<br>e=&gt;end<br>st-&gt;op-&gt;cond<br>cond(yes)-&gt;e<br>cond(no)-&gt;op</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start</span><br><span class="line">op=&gt;operation: Your Operation</span><br><span class="line">cond=&gt;condition: Yes or No? </span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2>
   </div>
 </article>

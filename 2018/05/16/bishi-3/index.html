@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="##题目描述 在转发系统中，报文往往储存在固定长度的缓存当中，通常称这种定长的缓存为PBUF。一个报文可以存储在一个或者多个PBUF中，形成一个PBUF链。报文最多可由16个PBUF组成。PBUF的本身的长度是一致的，称为payload_len。本题中，我们将每个PBUF当前存储的数据简化为两个属性：数据相对于PBUF存储起始位置的偏移(data_offset)和数据长度（data_len）。这些">
+<meta property="og:type" content="article">
+<meta property="og:title" content="华为笔试-3">
+<meta property="og:url" content="http://liu-yiwei.github.io/2018/05/16/bishi-3/index.html">
+<meta property="og:site_name" content="Carpe diem">
+<meta property="og:description" content="##题目描述 在转发系统中，报文往往储存在固定长度的缓存当中，通常称这种定长的缓存为PBUF。一个报文可以存储在一个或者多个PBUF中，形成一个PBUF链。报文最多可由16个PBUF组成。PBUF的本身的长度是一致的，称为payload_len。本题中，我们将每个PBUF当前存储的数据简化为两个属性：数据相对于PBUF存储起始位置的偏移(data_offset)和数据长度（data_len）。这些">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-16T15:05:29.275Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="华为笔试-3">
+<meta name="twitter:description" content="##题目描述 在转发系统中，报文往往储存在固定长度的缓存当中，通常称这种定长的缓存为PBUF。一个报文可以存储在一个或者多个PBUF中，形成一个PBUF链。报文最多可由16个PBUF组成。PBUF的本身的长度是一致的，称为payload_len。本题中，我们将每个PBUF当前存储的数据简化为两个属性：数据相对于PBUF存储起始位置的偏移(data_offset)和数据长度（data_len）。这些">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>华为笔试-3</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/Search">搜索</a></li>
+         
+          <li><a href="/tags">tags</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/05/16/bishi-2/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://liu-yiwei.github.io/2018/05/16/bishi-3/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&text=华为笔试-3"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&is_video=false&description=华为笔试-3"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=华为笔试-3&body=Check out this article: http://liu-yiwei.github.io/2018/05/16/bishi-3/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&name=华为笔试-3&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        华为笔试-3
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Carpe diem</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-05-16T15:04:42.967Z" itemprop="datePublished">2018-05-16</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>##题目描述</p>
+<p>在转发系统中，报文往往储存在固定长度的缓存当中，通常称这种定长的缓存为PBUF。一个报文可以存储在一个或者多个PBUF中，形成一个PBUF链。报文最多可由16个PBUF组成。PBUF的本身的长度是一致的，称为payload_len。本题中，我们将每个PBUF当前存储的数据简化为两个属性：数据相对于PBUF存储起始位置的偏移(data_offset)和数据长度（data_len）。这些属性的单位均为字节。在报文转发业务实现的过程中，有时需要在报文尾部添加一定长度的数据。添加数据时可能需要多种操作的组合，可以根据需要执行创建新PBUF、将数据从一个PBUF拷贝到另一个PBUF或者将数据移动到本PBUF另一个位置等操作。添加方案的原则是：首先考虑最小化数据搬移，其次考虑最小化新增PBUF。即添加数据的过程如果最后一片PBUF的尾部无法满足添加要求，则优先考虑添加PBUF，而非搬移数据腾出空间。添加的数据应该尽量向较前的PBUF集中。</p>
+<p>以下是一个实例：</p>
+<p>报文由三个PBUF组成，这些PBUF的payload_len都是2048，data_offset和data_len依次是{0,2048}、{0,2048}和{0,1024}</p>
+<p>现在要在报文尾部添加一段200字节长度的数据</p>
+<p>处理完成后，报文的PBUF的属性依次是：</p>
+<p>{0,2048}、{0,2048}和{0,1224}。</p>
+<p>请编程解决一段数据插入到某个报文尾部的方案选择问题。</p>
+<p>输入描述:<br>第一行数据，一个无符号整数表示的PBUF长度（payload_len）；<br>第二行，插入数据的长度，无符号整数。<br>第三行及以后，每行是一个PBUF的属性，即data_offset和data_len，均是无符号整数，用逗号(,)分隔。<br>最后一行以“end”作为结束标记。<br>输入的数据均是正确的，且所有整数都不超过4096，无须进行检查。<br>输出描述:<br>最佳插入方案处理之后的报文所有PBUF的属性，每个PBUF一行，data_offset和data_len都用无符号整数表示，用逗号分隔。</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/Search">搜索</a></li>
+         
+          <li><a href="/tags">tags</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://liu-yiwei.github.io/2018/05/16/bishi-3/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&text=华为笔试-3"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&is_video=false&description=华为笔试-3"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=华为笔试-3&body=Check out this article: http://liu-yiwei.github.io/2018/05/16/bishi-3/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&title=华为笔试-3"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://liu-yiwei.github.io/2018/05/16/bishi-3/&name=华为笔试-3&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 LiuYiwei
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/Search">搜索</a></li>
+         
+          <li><a href="/tags">tags</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
