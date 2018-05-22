@@ -3,6 +3,55 @@
   
     
     <entry>
+      <title>索引技术 | 2-3树 B树</title>
+      <link href="/2018/05/22/suanfajichu/Index_skill/"/>
+      <url>/2018/05/22/suanfajichu/Index_skill/</url>
+      <content type="html"><![CDATA[<h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><h2 id="线性索引"><a href="#线性索引" class="headerlink" title="线性索引"></a>线性索引</h2><h2 id="哈希索引"><a href="#哈希索引" class="headerlink" title="哈希索引"></a>哈希索引</h2><h2 id="树状索引"><a href="#树状索引" class="headerlink" title="树状索引"></a>树状索引</h2><h3 id="2-3树"><a href="#2-3树" class="headerlink" title="2-3树"></a>2-3树</h3><h3 id="B树"><a href="#B树" class="headerlink" title="B树"></a>B树</h3><h3 id="B-树"><a href="#B-树" class="headerlink" title="B+树"></a>B+树</h3><h3 id="B-树-1"><a href="#B-树-1" class="headerlink" title="B*树"></a>B*树</h3>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>设计模式 | 模板方法模式</title>
+      <link href="/2018/05/18/design-mode/template-method-pattern/"/>
+      <url>/2018/05/18/design-mode/template-method-pattern/</url>
+      <content type="html"><![CDATA[<h1 id="模板方法用于封装算法"><a href="#模板方法用于封装算法" class="headerlink" title="模板方法用于封装算法"></a>模板方法用于封装算法</h1><p>这个模式在复习排序算法得时候用到</p><p>## </p><h2 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h2><p>写算法要尽量避免解决重复的问题，设计类的时候则要尽可能抽取所有的共同点<br><strong>本博客可能存在理解不深导致的错误</strong></p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>《Head First设计模式（中文版）》 277页</p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>算法基础 | 归并排序</title>
+      <link href="/2018/05/18/suanfajichu/Merge_sort/"/>
+      <url>/2018/05/18/suanfajichu/Merge_sort/</url>
+      <content type="html"><![CDATA[<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>归并排序就是把数组切分成多个小段,然后每段分别进行排序<br>有分治的思想体现出来,先切分成小问题,然后再合并成大问题(这次就是在合并的问题上莫名其妙鸽掉了,很可惜)</p><h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2><h3 id="递归实现"><a href="#递归实现" class="headerlink" title="递归实现"></a>递归实现</h3><h3 id="迭代实现"><a href="#迭代实现" class="headerlink" title="迭代实现"></a>迭代实现</h3><h2 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h2><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><h2 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h2><p>tap4fun的面试，排序算法考的好多,不巧我对具体实现都忘干净了,gg,很可惜<br>还是要自己手写一遍,增加记忆也练练手感</p><hr><p>总感觉自己是个投机主义者。。。</p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 算法基础 </tag>
+            
+            <tag> 排序 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>华为笔试-3 | 数据插入到某个报文尾部的方案选择</title>
       <link href="/2018/05/16/bishi-3/"/>
       <url>/2018/05/16/bishi-3/</url>
